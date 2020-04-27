@@ -1,5 +1,5 @@
 module "aws_asg" {
-  source               = "modules/aws_asg"
+  source               = "./modules/aws_asg"
   unique_name          = "${var.unique_name}"
   ami_id               = "${var.ami_id}"
   instance_type        = "${var.instance_type}"

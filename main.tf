@@ -22,7 +22,7 @@ module "cmp" {
   unique_name = "cmp-${var.app_name}-${var.app_env}"
 
   tags = {
-    "Name"        = "cmp-${var.app_name}-${app_env}"
+    "Name"        = "cmp-${var.app_name}-${var.app_env}"
     "Product"     = "${var.app_name}"
     "Environment" = "${var.app_env}"
   }

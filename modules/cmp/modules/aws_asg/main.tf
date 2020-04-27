@@ -1,7 +1,7 @@
 data "template_file" "user_data" {
   template = "${file("${path.module}/userdata/user-data.sh.tpl")}"
 
-  vars {
+  vars = {
     test = "test"
   }
 }
@@ -31,7 +31,7 @@ resource "aws_autoscaling_group" "cmp_autoscaling_group" {
   min_size             = "${var.asg_min_size}"
   max_size             = "${var.asg_max_size}"
   vpc_zone_identifier  = ["${var.subnet_ids}"]
-  depends_on           = ["aws_launch_configuration.cmp_launch_configuration"]
+  depends_on           = [aws_launch_configuration.cmp_launch_configuration]
 
   lifecycle {
     create_before_destroy = true

@@ -1,7 +1,7 @@
 data "template_file" "user_data" {
   template = "${file("${path.module}/userdata/user-data.sh.tpl")}"
 
-  vars {
+  "vars" {
     test = "test"
   }
 }

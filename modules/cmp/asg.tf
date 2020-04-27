@@ -14,12 +14,12 @@ module "aws_asg" {
 }
 
 module "aws_iam" {
-  source      = "modules/aws_iam"
+  source      = "./modules/aws_iam"
   unique_name = "${var.unique_name}"
 }
 
 module "aws_sg" {
-  source      = "modules/aws_sg"
+  source      = "./modules/aws_sg"
   vpc_id      = "${var.vpc_id}"
   unique_name = "${var.unique_name}"
 }

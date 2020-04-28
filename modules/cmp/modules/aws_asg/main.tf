@@ -40,4 +40,5 @@ resource "aws_autoscaling_group" "cmp_autoscaling_group" {
 
 resource "aws_autoscaling_attachment" "cmp_asg_attachment" {
   autoscaling_group_name = "${aws_autoscaling_group.cmp_autoscaling_group.id}"
+  elb = "${var.cmp_elb_id}"
 }

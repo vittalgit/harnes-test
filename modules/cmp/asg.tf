@@ -9,6 +9,7 @@ module "aws_asg" {
   asg_min_size         = "${var.asg_min_size}"
   asg_max_size         = "${var.asg_max_size}"
   key_name             = "${var.key_name}"
+  cmp_elb_id           = "${module.aws_elb_cmp_elb_id}"
 }
 
 module "aws_iam" {
@@ -20,4 +21,8 @@ module "aws_sg" {
   source      = "./modules/aws_sg"
   vpc_id      = "${var.vpc_id}"
   unique_name = "${var.unique_name}"
+}
+module "aws_elb" {
+  source = "./modules/aws_elb"
+  vailability_zones = "${var.vailability_zones}"
 }

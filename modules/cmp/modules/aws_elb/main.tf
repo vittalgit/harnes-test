@@ -1,5 +1,5 @@
 resource "aws_elb" "cmp_elb" {
-  name               = "cmp_${var.unique_name}-elb"
+  name               = "cmp_${var.unique_name}_elb"
   //availability_zones = ["${var.availability_zones}"]
   subnets = ["${var.elb_subnet_ids}"]
 

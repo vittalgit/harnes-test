@@ -19,7 +19,7 @@ provider "aws" {
 
 module "cmp" {
   source      = "./modules/cmp"
-  unique_name = "cmp-${var.app_name}-${var.app_env}"
+  unique_name = "cmp_${var.app_name}_${var.app_env}"
 
   tags = {
     "Name"        = "cmp-${var.app_name}-${var.app_env}"

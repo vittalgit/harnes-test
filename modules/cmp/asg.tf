@@ -9,7 +9,7 @@ module "aws_asg" {
   asg_min_size         = "${var.asg_min_size}"
   asg_max_size         = "${var.asg_max_size}"
   key_name             = "${var.key_name}"
-  cmp_elb_id           = "${module.aws_elb_cmp_elb_id}"
+  cmp_elb_id           = "${module.aws_elb.cmp_elb_id}"
 }
 
 module "aws_iam" {

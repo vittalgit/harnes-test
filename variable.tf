@@ -50,3 +50,7 @@ variable "asg_max_size" {
 variable "key_name" {
   default = "vittal_a"
 }
+
+variable "elb_subnet_ids" {
+  default = "subnet-0c20f2b065f8f4f5c"
+}

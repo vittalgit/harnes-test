@@ -1,6 +1,7 @@
 resource "aws_elb" "cmp_elb" {
-  name               = "cmp_${var.unique_name}lb"
-  availability_zones = [${var.availability_zones}]
+  name               = "cmp_${var.unique_name}-elb"
+  //availability_zones = ["${var.availability_zones}"]
+  subnets = ["${var.elb_subnet_ids}"]
 
   listener {
     instance_port     = 8000

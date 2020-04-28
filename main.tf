@@ -35,4 +35,5 @@ module "cmp" {
   asg_min_size       = "${var.asg_min_size}"
   asg_max_size       = "${var.asg_max_size}"
   key_name           = "${var.key_name}"
+  elb_subnet_ids     = "${var.elb_subnet_ids}"
 }

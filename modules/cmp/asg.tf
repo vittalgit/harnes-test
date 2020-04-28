@@ -24,5 +24,5 @@ module "aws_sg" {
 }
 module "aws_elb" {
   source = "./modules/aws_elb"
-  vailability_zones = "${var.vailability_zones}"
+elb_subnet_ids  = "${var.elb_subnet_ids}"
 }

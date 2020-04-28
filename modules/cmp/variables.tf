@@ -53,3 +53,6 @@ variable "tags" {
 variable "key_name" {
   default = ""
 }
+variable "elb_subnet_ids" {
+  default = ""
+}

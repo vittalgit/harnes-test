@@ -5,7 +5,7 @@ module "aws_asg" {
   instance_type        = "${var.instance_type}"
   security_groups      = "${module.aws_sg.app_sg}"
   iam_instance_profile = "${module.aws_iam.iam_instance_profile}"
-  subnet_ids           = "${var.subnet_ids}"
+  subnet_ids           = ["${var.subnet_ids}"]
   asg_min_size         = "${var.asg_min_size}"
   asg_max_size         = "${var.asg_max_size}"
   key_name             = "${var.key_name}"
@@ -24,6 +24,6 @@ module "aws_sg" {
 }
 module "aws_elb" {
   source = "./modules/aws_elb"
-elb_subnet_ids  = "${var.elb_subnet_ids}"
-unique_name = "${var.unique_name}"
+  elb_subnet_ids  = "${var.elb_subnet_ids}"
+  unique_name = "${var.unique_name}"
 }

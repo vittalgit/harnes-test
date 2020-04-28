@@ -23,7 +23,7 @@ variable "vpc_id" {
 }
 
 variable "subnet_ids" {
-  default = "subnet-0c20f2b065f8f4f5c"
+  default = ["subnet-0c20f2b065f8f4f5c"]
 }
 
 variable "availability_zones" {

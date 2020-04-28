@@ -25,4 +25,5 @@ module "aws_sg" {
 module "aws_elb" {
   source = "./modules/aws_elb"
 elb_subnet_ids  = "${var.elb_subnet_ids}"
+unique_name = "${var.unique_name}"
 }

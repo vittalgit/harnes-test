@@ -57,7 +57,7 @@ variable "elb_subnet_ids" {
   type = list(string)
 }
 
-variable "" {
+variable "tags" {
   default = {
     "Name"        = "cmp-${var.app_name}-${var.app_env}"
     "Product"     = "${var.app_name}"

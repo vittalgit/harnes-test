@@ -10,7 +10,7 @@ module "aws_asg" {
   asg_max_size         = "${var.asg_max_size}"
   key_name             = "${var.key_name}"
   cmp_elb_id           = "${module.aws_elb.cmp_elb_id}"
-  tags                 = var.tags
+  tags                 = "${var.tags}"
 }
 
 module "aws_iam" {

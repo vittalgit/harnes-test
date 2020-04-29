@@ -37,17 +37,17 @@ resource "aws_autoscaling_group" "cmp_autoscaling_group" {
   lifecycle {
     create_before_destroy = true
   }
-  tags {
+  tag {
     key = "Name"
     value = "${lookup(var.tags, "Name")}"
     propagate_at_launch = true
   }
-  tags {
+  tag {
     key = "Environment"
     value = "${lookup(var.tags, "Environment")}"
     propagate_at_launch = true
   }
-  tags {
+  tag {
     key = "Product"
     value = "${lookup(var.tags, "Product")}"
     propagate_at_launch = true

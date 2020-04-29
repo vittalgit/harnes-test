@@ -28,7 +28,7 @@ variable "subnet_ids" {
 
 variable "availability_zones" {
   default = ["us-east-1a, us-east-1b"]
-  type = list
+  type = list(string)
 }
 
 variable "instance_type" {
@@ -53,4 +53,5 @@ variable "key_name" {
 
 variable "elb_subnet_ids" {
   default = "subnet-0c20f2b065f8f4f5c"
+  type = list(string)
 }

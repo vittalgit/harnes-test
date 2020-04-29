@@ -38,8 +38,9 @@ resource "aws_autoscaling_group" "cmp_autoscaling_group" {
   lifecycle {
     create_before_destroy = true
   }
+  tags = "${var.tags}"
 }
-tags = "${var.tags}"
+
 
 resource "aws_autoscaling_attachment" "cmp_asg_attachment" {
   autoscaling_group_name = "${aws_autoscaling_group.cmp_autoscaling_group.id}"

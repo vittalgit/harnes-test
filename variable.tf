@@ -24,6 +24,7 @@ variable "vpc_id" {
 
 variable "subnet_ids" {
   default = ["subnet-0c20f2b065f8f4f5c"]
+  type = list(string)
 }
 
 variable "availability_zones" {
@@ -52,6 +53,6 @@ variable "key_name" {
 }
 
 variable "elb_subnet_ids" {
-  default = "subnet-0c20f2b065f8f4f5c"
+  default = ["subnet-0c20f2b065f8f4f5c"]
   type = list(string)
 }

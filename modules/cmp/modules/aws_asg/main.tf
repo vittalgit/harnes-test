@@ -6,6 +6,10 @@ data "template_file" "user_data" {
   }
 }
 
+locals {
+  tags_asg_format = null_resource.tags_as_list_of_maps.*.triggers
+}
+
 resource "aws_launch_configuration" "cmp_launch_configuration" {
   name                 = "cmp-${var.unique_name}-launch_configuration"
   image_id             = "${var.ami_id}"
@@ -38,7 +42,7 @@ resource "aws_autoscaling_group" "cmp_autoscaling_group" {
   lifecycle {
     create_before_destroy = true
   }
-  tags = var.tags
+  tags = local.tags_asg_format
 }
 
 

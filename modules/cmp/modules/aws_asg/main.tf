@@ -30,7 +30,7 @@ resource "aws_autoscaling_group" "cmp_autoscaling_group" {
   launch_configuration = "${aws_launch_configuration.cmp_launch_configuration.id}"
   min_size             = "${var.asg_min_size}"
   max_size             = "${var.asg_max_size}"
-  vpc_zone_identifier = var.sub_ids
+  vpc_zone_identifier = var.subnet_ids
   //vpc_zone_identifier  = ["${split(",", join(var.sub_ids))}"]
   depends_on           = [aws_launch_configuration.cmp_launch_configuration]
 

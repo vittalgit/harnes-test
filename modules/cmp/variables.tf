@@ -48,7 +48,7 @@ variable "asg_max_size" {
 
 variable "tags" {
   type = map(string)
-  default = ""
+  default = {}
 }
 
 variable "key_name" {

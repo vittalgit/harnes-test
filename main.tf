@@ -21,11 +21,7 @@ module "cmp" {
   source      = "./modules/cmp"
   unique_name = "cmp_${var.app_name}_${var.app_env}"
 
-  tags = {
-    "Name"        = "cmp-${var.app_name}-${var.app_env}"
-    "Product"     = "${var.app_name}"
-    "Environment" = "${var.app_env}"
-  }
+  tags = "${var.tags}"
 
   vpc_id             = "${var.vpc_id}"
   availability_zones = ["${var.availability_zones}"]

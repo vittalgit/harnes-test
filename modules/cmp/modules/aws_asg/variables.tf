@@ -12,3 +12,4 @@ variable asg_max_size {}
 
 variable subnet_ids {}
 variable cmp_elb_id {}
+variable tags {}
